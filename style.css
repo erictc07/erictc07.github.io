@@ -1,0 +1,317 @@
+/* 1. VARIABLES GLOBALS */
+:root {
+    --color-fons-principal: #0f172a; 
+    --color-principal: #7e22ce; 
+    --color-accio: #10b981; 
+    --color-text-principal: #f1f5f9; 
+    --color-text-secundari: #94a3b8; 
+    
+    --amplada-maxima: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* 2. ESTIL BASE DEL BODY  */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fons-principal) !important; 
+    color: var(--color-text-principal) !important;
+}
+
+main {
+    max-width: var(--amplada-maxima);
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--color-principal) !important;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-principal) !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 3. HEADER i NAVEGACIÓ */
+.main-header {
+    background-color: var(--color-fons-principal); 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); 
+    border-bottom: 1px solid var(--color-text-secundari);
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: var(--color-text-principal) !important;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-accio) !important; 
+    text-decoration: none;
+}
+
+/* 4. FOOTER */
+.main-footer {
+    background-color: #0c1221; 
+    color: var(--color-text-secundari);
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid var(--color-text-secundari);
+}
+
+.main-footer .footer-links a {
+    color: var(--color-text-secundari) !important;
+    margin: 0 15px;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.main-footer .footer-links a:hover {
+    color: var(--color-principal) !important;
+    text-decoration: none;
+}
+
+.main-footer p {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+
+/* 5. BOTONS */
+.boto-principal {
+    display: inline-block;
+    background-color: var(--color-accio); 
+    color: var(--color-fons-principal); 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: 2px solid var(--color-accio);
+}
+
+.boto-principal:hover {
+    background-color: #0ea76c; 
+    text-decoration: none;
+}
+
+.boto-secundari {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-principal); 
+    padding: 8px 15px;
+    border: 2px solid var(--color-principal);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boto-secundari:hover {
+    background-color: var(--color-principal);
+    color: var(--color-fons-principal); 
+    text-decoration: none;
+}
+
+.tag-destacat {
+    color: var(--color-accio); 
+    font-weight: bold;
+}
+
+.descripcio-rol, .contingut-principal p, .resenya p, .text-secondary {
+    color: var(--color-text-secundari) !important; 
+}
+
+.card {
+    background-color: var(--color-fons-principal) !important; 
+    border-color: var(--color-text-secundari) !important;
+}
+
+.card-title {
+    color: var(--color-principal) !important; 
+}
+
+.card-text {
+    color: var(--color-text-secundari) !important; 
+}
+
+.modal-content {
+    background-color: var(--color-fons-principal) !important;
+    border: 1px solid var(--color-principal) !important;
+}
+
+.modal-title {
+    color: var(--color-principal) !important;
+}
+.modal-body {
+    color: var(--color-text-secundari) !important;
+}
+.modal-body h3 {
+    color: var(--color-accio) !important;
+}
+
+/* 6. ESTILS D'IMATGES */
+
+img {
+    max-width: 40%; 
+    height: auto; 
+}
+
+.servei-card img, 
+.card-img-top { 
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    border: 2px solid var(--color-principal); 
+}
+
+.membre-equip img,
+.card-img-top.rounded-circle { 
+    border-radius: 50% !important; 
+    border: 4px solid var(--color-accio); 
+    box-shadow: 0 0 15px var(--color-principal); 
+    transition: transform 0.3s ease;
+}
+
+.membre-equip img:hover,
+.card-img-top.rounded-circle:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 25px var(--color-accio); 
+}
+
+/* 7. MAQUETACIÓ DE FORMULARIS  */
+
+.formulari-contacte {
+    background-color: #1a2233; 
+    border: 1px solid var(--color-principal);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-control {
+    background-color: var(--color-fons-principal) !important;
+    color: var(--color-text-principal) !important;
+    border: 1px solid var(--color-text-secundari) !important;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    background-color: var(--color-fons-principal) !important;
+    color: var(--color-text-principal) !important;
+    border-color: var(--color-accio) !important; 
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25) !important; 
+}
+
+.form-check-input:checked {
+    background-color: var(--color-accio) !important;
+    border-color: var(--color-accio) !important;
+}
+.form-check-label {
+    color: var(--color-text-secundari) !important;
+}
+
+/* 8. MAQUETACIÓ DE SECCIONS  */
+
+.fita-historia:last-child {
+    border-bottom: none;
+}
+
+/* 9. RESPONSIVITAT */
+
+
+@media (max-width: 768px) {
+    
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .main-nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    
+    .main-nav ul li a {
+        display: block;
+    }
+
+    
+    .main-footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .main-footer .footer-links a {
+        margin: 0; 
+    }
+    
+    
+    
+    img {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    
+    h1 {
+        font-size: 2em !important;
+    }
+    
+    main {
+        padding: 0 10px;
+    }
+}
