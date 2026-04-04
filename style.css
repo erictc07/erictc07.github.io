@@ -315,3 +315,15 @@ img {
         padding: 0 10px;
     }
 }
+
+/* Ajust del carrusel d'imatges GIMP (Sense retallar la imatge) */
+#heroCarousel .carousel-item img {
+    max-width: 100% !important; 
+    width: 100% !important;
+    height: auto !important; /* Això respecta la proporció original de la imatge */
+}
+
+#heroCarousel .carousel-caption {
+    padding: 20px;
+    bottom: 10%;
+}
